@@ -12,4 +12,5 @@ datasource db {
 model Links{
   id Int @id @default(autoincrement())
   link String
+  server String
 }
