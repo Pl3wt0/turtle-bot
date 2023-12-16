@@ -16,7 +16,7 @@ client.once(Events.ClientReady, (readyClient) => {
   console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 });
 client.on(Events.MessageCreate, async (message) => {
-  if (message.author.bot) return;
+  if (message.author.bot || message.content.includes("gif")) return;
 
   const links = message.content.match(/https?:\/\/\S+/gi);
 
