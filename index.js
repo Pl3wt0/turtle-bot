@@ -35,7 +35,7 @@ client.on(Events.MessageCreate, async (message) => {
 
       if (foundLink) {
         message.react("🐢");
-        console.log("turtled " + message.id);
+        console.log("Turtled: " + message.content + " at " + new Date());
       } else {
         await prisma.links.create({
           data: {
