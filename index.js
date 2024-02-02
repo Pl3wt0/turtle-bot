@@ -36,13 +36,15 @@ client.on(Events.MessageCreate, async (message) => {
       if (foundLink) {
         message.react("🐢");
         console.log(
-          message.author.displayName +
+          "\n \n \n" +
+            message.author.displayName +
             " Got turtled: " +
             message.content +
             " at " +
             new Date() +
             " in " +
-            message.guild.name
+            message.guild.name +
+            "\n \n \n"
         );
       } else {
         await prisma.links.create({
